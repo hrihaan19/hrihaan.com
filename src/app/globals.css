@@ -158,3 +158,53 @@ html.lenis, html.lenis body { height: auto; }
   opacity: 1;
   transform: translateX(0);
 }
+
+/* ─── Print (resume page) ────────────────────────────────── */
+@media print {
+  @page {
+    margin: 1.4cm 1.6cm;
+    size: letter;
+  }
+
+  /* Force light canvas for print */
+  html, body {
+    background: #fff !important;
+    color: #0A0A0A !important;
+    font-size: 11pt;
+  }
+
+  /* Override all CSS vars for print */
+  :root, [data-theme="dark"] {
+    --bg:          #fff;
+    --bg-surface:  #fff;
+    --bg-card:     #fff;
+    --fg:          #0A0A0A;
+    --fg-muted:    #444444;
+    --fg-subtle:   #888888;
+    --border:      #CCCCCC;
+    --border-mid:  #CCCCCC;
+    --accent:      #1A5BBF;
+  }
+
+  /* Hide chrome */
+  header,
+  .print\:hidden {
+    display: none !important;
+  }
+
+  /* No animations */
+  *, *::before, *::after {
+    animation: none !important;
+    transition: none !important;
+  }
+
+  /* Prevent orphans */
+  h1, h2, h3, p, li {
+    orphans: 3;
+    widows: 3;
+  }
+
+  /* No page break inside entries */
+  .print\:mb-4 { margin-bottom: 1rem !important; }
+  .print\:mb-8 { margin-bottom: 2rem !important; }
+}

@@ -63,9 +63,16 @@ export default function Nav() {
         {/* Right side */}
         <div className="flex items-center gap-6">
           <ThemeToggle />
+          <Link
+            href="/resume"
+            className="text-label transition-opacity duration-200 hover:opacity-100"
+            style={{ color: "var(--fg-muted)", opacity: 0.7 }}
+          >
+            Résumé
+          </Link>
           <a
             href="mailto:hribhu19@gmail.com"
-            className="text-label transition-opacity duration-200"
+            className="text-label transition-opacity duration-200 hover:opacity-100"
             style={{ color: "var(--fg-muted)", opacity: 0.7 }}
           >
             Email ↗
