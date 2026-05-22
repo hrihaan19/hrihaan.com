@@ -1,0 +1,22 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(curl -s \"https://api.github.com/users/hrihaan19/repos?per_page=100&sort=updated\")",
+      "Bash(python3 -c ':*)",
+      "Bash(curl -s \"https://raw.githubusercontent.com/hrihaan19/deadlineos/main/README.md\")",
+      "Bash(curl -s \"https://raw.githubusercontent.com/hrihaan19/deadlineos/master/README.md\")",
+      "Bash(curl -s \"https://raw.githubusercontent.com/hrihaan19/pswi-data-center-audit/main/README.md\")",
+      "Bash(curl -s \"https://raw.githubusercontent.com/hrihaan19/pswi-data-center-audit/master/README.md\")",
+      "Bash(curl -s \"https://raw.githubusercontent.com/hrihaan19/ehs-student-portal1/main/README.md\")",
+      "Bash(curl -s \"https://raw.githubusercontent.com/hrihaan19/ehs-student-portal1/master/README.md\")",
+      "Bash(curl -s \"https://raw.githubusercontent.com/hrihaan19/ehs-student-portal/main/README.md\")",
+      "Bash(curl -s \"https://raw.githubusercontent.com/hrihaan19/ehs-student-portal/master/README.md\")",
+      "Bash(curl -s \"https://raw.githubusercontent.com/hrihaan19/LifeLens-CogniHacks-2025-/main/README.md\")",
+      "WebFetch(domain:www.linkedin.com)",
+      "Bash(curl -s https://api.github.com/repos/hrihaan19/__TRACKED_VAR__)",
+      "WebFetch(domain:portfolio-hrihaan19s-projects.vercel.app)",
+      "Bash(curl -s \"https://api.github.com/repos/hrihaan19/thirsty-compute-atlas/contents\")",
+      "Bash(curl -s \"https://raw.githubusercontent.com/hrihaan19/thirsty-compute-atlas/main/PROJECT_BRIEF_v2.md\")"
+    ]
+  }
+}
