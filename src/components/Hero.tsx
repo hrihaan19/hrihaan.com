@@ -86,8 +86,8 @@ export default function Hero() {
         className="absolute hidden md:block"
         style={{
           right: "clamp(1.5rem, 5vw, 5rem)",
-          top: "25%",
-          transform: "translateY(-20%)",
+          top: "12%",
+          transform: "translateY(-10%)",
           width: "clamp(280px, 26vw, 400px)",
           height: "70vh",
           overflow: "hidden",
