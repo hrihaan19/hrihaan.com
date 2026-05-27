@@ -9,13 +9,7 @@ const LAST  = "BHUTANI";
 
 const easeOutExpo = [0.16, 1, 0.3, 1] as const;
 
-function SplitWord({
-  word,
-  baseDelay,
-}: {
-  word: string;
-  baseDelay: number;
-}) {
+function SplitWord({ word, baseDelay }: { word: string; baseDelay: number }) {
   return (
     <span className="inline-block overflow-hidden leading-none" aria-label={word}>
       {word.split("").map((char, i) => (
@@ -24,11 +18,7 @@ function SplitWord({
           style={{ display: "inline-block" }}
           initial={{ y: "100%", opacity: 0 }}
           animate={{ y: "0%", opacity: 1 }}
-          transition={{
-            duration: 0.75,
-            delay: baseDelay + i * 0.04,
-            ease: easeOutExpo,
-          }}
+          transition={{ duration: 0.75, delay: baseDelay + i * 0.04, ease: easeOutExpo }}
           aria-hidden="true"
         >
           {char}
@@ -38,15 +28,7 @@ function SplitWord({
   );
 }
 
-function FadeUp({
-  children,
-  delay,
-  className,
-}: {
-  children: React.ReactNode;
-  delay: number;
-  className?: string;
-}) {
+function FadeUp({ children, delay, className }: { children: React.ReactNode; delay: number; className?: string }) {
   return (
     <div className={`overflow-hidden ${className ?? ""}`}>
       <motion.div
@@ -63,7 +45,6 @@ function FadeUp({
 export default function Hero() {
   const containerRef = useRef<HTMLElement>(null);
 
-  // Cursor parallax on name
   const mouseX = useMotionValue(0);
   const mouseY = useMotionValue(0);
   const springX = useSpring(mouseX, { stiffness: 40, damping: 20 });
@@ -71,28 +52,18 @@ export default function Hero() {
   const rotateX = useTransform(springY, [-0.5, 0.5], [2, -2]);
   const rotateY = useTransform(springX, [-0.5, 0.5], [-2, 2]);
 
-  // Subtle parallax on photo (moves opposite to name)
-  const photoX = useTransform(springX, [-0.5, 0.5], [8, -8]);
-  const photoY = useTransform(springY, [-0.5, 0.5], [6, -6]);
-
   useEffect(() => {
     const el = containerRef.current;
     if (!el) return;
-    function onMove(e: MouseEvent) {
-      const rect = el!.getBoundingClientRect();
-      mouseX.set((e.clientX - rect.left) / rect.width - 0.5);
-      mouseY.set((e.clientY - rect.top) / rect.height - 0.5);
-    }
-    function onLeave() {
-      mouseX.set(0);
-      mouseY.set(0);
-    }
+    const onMove = (e: MouseEvent) => {
+      const r = el.getBoundingClientRect();
+      mouseX.set((e.clientX - r.left) / r.width - 0.5);
+      mouseY.set((e.clientY - r.top) / r.height - 0.5);
+    };
+    const onLeave = () => { mouseX.set(0); mouseY.set(0); };
     el.addEventListener("mousemove", onMove);
     el.addEventListener("mouseleave", onLeave);
-    return () => {
-      el.removeEventListener("mousemove", onMove);
-      el.removeEventListener("mouseleave", onLeave);
-    };
+    return () => { el.removeEventListener("mousemove", onMove); el.removeEventListener("mouseleave", onLeave); };
   }, [mouseX, mouseY]);
 
   const firstDelay = 0.1;
@@ -103,80 +74,68 @@ export default function Hero() {
     <section
       ref={containerRef}
       id="hero"
-      className="relative flex flex-col justify-end overflow-hidden"
+      className="relative flex flex-col justify-end"
       style={{
         minHeight: "100svh",
         paddingBottom: "clamp(3rem, 7vw, 6rem)",
         perspective: "1200px",
       }}
     >
-      {/* ── Portrait — top-right, fades in independently ── */}
-      <motion.div
-        className="absolute hidden md:block"
-        style={{
-          top: 0,
-          right: "clamp(1.5rem, 5vw, 5rem)",
-          width: "clamp(220px, 22vw, 340px)",
-          height: "clamp(280px, 28vw, 430px)",
-          x: photoX,
-          y: photoY,
-        }}
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 1.1, delay: firstDelay + 0.2, ease: easeOutExpo }}
-      >
-        <div
-          style={{
-            width: "100%",
-            height: "100%",
-            position: "relative",
-            overflow: "hidden",
-          }}
-        >
-          <Image
-            src="/hrihaan.png"
-            alt="Hrihaan Bhutani"
-            fill
-            priority
-            sizes="(max-width: 1440px) 22vw, 340px"
-            style={{
-              objectFit: "cover",
-              objectPosition: "center top",
-              filter: "grayscale(15%) contrast(1.05)",
-            }}
-          />
-          {/* Gradient fade into canvas at the bottom */}
-          <div
-            style={{
-              position: "absolute",
-              inset: 0,
-              background:
-                "linear-gradient(to bottom, transparent 55%, var(--bg) 100%)",
-              pointerEvents: "none",
-            }}
-          />
-        </div>
-      </motion.div>
-
       <div className="container-ed">
-        {/* ── Name block ── */}
-        <motion.div
-          style={{ rotateX, rotateY, transformStyle: "preserve-3d" }}
-          className="mb-6 md:mb-8 select-none"
-        >
-          <div className="text-hero block" style={{ color: "var(--fg)" }}>
-            <SplitWord word={FIRST} baseDelay={firstDelay} />
-            <br />
-            <SplitWord word={LAST}  baseDelay={lastDelay} />
-          </div>
-        </motion.div>
+
+        {/* ── Name + Photo in the same row, bottoms aligned ── */}
+        <div className="flex items-end justify-between mb-6 md:mb-8 select-none">
+
+          {/* Name */}
+          <motion.div style={{ rotateX, rotateY, transformStyle: "preserve-3d" }}>
+            <div className="text-hero" style={{ color: "var(--fg)" }}>
+              <SplitWord word={FIRST} baseDelay={firstDelay} />
+              <br />
+              <SplitWord word={LAST}  baseDelay={lastDelay} />
+            </div>
+          </motion.div>
+
+          {/* Portrait — bottom-aligned with the name, hidden on mobile */}
+          <motion.div
+            className="hidden md:block flex-shrink-0"
+            style={{
+              width: "clamp(180px, 15vw, 230px)",
+              // Bleed slightly below the baseline into the rule area
+              marginBottom: "-2rem",
+            }}
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1.0, delay: firstDelay + 0.15, ease: easeOutExpo }}
+          >
+            <div style={{ position: "relative", paddingBottom: "130%", overflow: "hidden" }}>
+              <Image
+                src="/hrihaan.png"
+                alt="Hrihaan Bhutani"
+                fill
+                priority
+                sizes="(max-width: 1440px) 15vw, 230px"
+                style={{
+                  objectFit: "cover",
+                  objectPosition: "center top",
+                  filter: "grayscale(10%) contrast(1.05)",
+                }}
+              />
+              {/* Fade bottom edge into canvas */}
+              <div
+                style={{
+                  position: "absolute",
+                  inset: 0,
+                  background: "linear-gradient(to bottom, transparent 50%, var(--bg) 100%)",
+                  pointerEvents: "none",
+                }}
+              />
+            </div>
+          </motion.div>
+        </div>
 
         {/* ── Rule ── */}
         <FadeUp delay={afterDelay}>
-          <div
-            className="w-full mb-8 md:mb-10"
-            style={{ height: "1px", background: "var(--border-mid)" }}
-          />
+          <div className="w-full mb-8 md:mb-10" style={{ height: "1px", background: "var(--border-mid)" }} />
         </FadeUp>
 
         {/* ── Meta row ── */}
@@ -184,15 +143,7 @@ export default function Hero() {
           {/* Left: identity */}
           <div className="flex flex-col gap-3 max-w-xl">
             <FadeUp delay={afterDelay + 0.05}>
-              <p
-                style={{
-                  fontFamily: "var(--font-sans)",
-                  fontSize: "clamp(1rem, 1.4vw, 1.2rem)",
-                  color: "var(--fg)",
-                  lineHeight: 1.4,
-                  fontWeight: 300,
-                }}
-              >
+              <p style={{ fontFamily: "var(--font-sans)", fontSize: "clamp(1rem, 1.4vw, 1.2rem)", color: "var(--fg)", lineHeight: 1.4, fontWeight: 300 }}>
                 Builder. Researcher. Student Board Trustee.
               </p>
             </FadeUp>
@@ -208,14 +159,8 @@ export default function Hero() {
             <FadeUp delay={afterDelay + 0.18}>
               <div className="flex items-center gap-2.5">
                 <span className="relative flex h-1.5 w-1.5 shrink-0">
-                  <span
-                    className="absolute inline-flex h-full w-full rounded-full animate-ping"
-                    style={{ background: "var(--accent)", opacity: 0.6 }}
-                  />
-                  <span
-                    className="relative inline-flex rounded-full h-1.5 w-1.5"
-                    style={{ background: "var(--accent)" }}
-                  />
+                  <span className="absolute inline-flex h-full w-full rounded-full animate-ping" style={{ background: "var(--accent)", opacity: 0.6 }} />
+                  <span className="relative inline-flex rounded-full h-1.5 w-1.5" style={{ background: "var(--accent)" }} />
                 </span>
                 <span className="text-label" style={{ color: "var(--fg-muted)" }}>
                   Building Emerald Echo — EHS course intelligence
@@ -226,13 +171,7 @@ export default function Hero() {
               <a
                 href="mailto:hribhu19@gmail.com"
                 className="link-line link-accent"
-                style={{
-                  fontFamily: "var(--font-sans)",
-                  fontSize: "0.8rem",
-                  fontWeight: 300,
-                  color: "var(--fg-muted)",
-                  letterSpacing: "0.02em",
-                }}
+                style={{ fontFamily: "var(--font-sans)", fontSize: "0.8rem", fontWeight: 300, color: "var(--fg-muted)", letterSpacing: "0.02em" }}
               >
                 hribhu19@gmail.com
               </a>
@@ -248,9 +187,7 @@ export default function Hero() {
         animate={{ opacity: 1 }}
         transition={{ delay: afterDelay + 0.5, duration: 0.6 }}
       >
-        <span className="text-label" style={{ color: "var(--fg-subtle)" }}>
-          Scroll ↓
-        </span>
+        <span className="text-label" style={{ color: "var(--fg-subtle)" }}>Scroll ↓</span>
       </motion.div>
     </section>
   );
