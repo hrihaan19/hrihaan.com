@@ -1,0 +1,105 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 560" fill="none">
+  <!-- Background -->
+  <rect width="1200" height="560" fill="#0A0A0A"/>
+  <!-- Subtle grid -->
+  <line x1="0" y1="100" x2="1200" y2="100" stroke="#141414" stroke-width="1"/>
+  <line x1="0" y1="200" x2="1200" y2="200" stroke="#141414" stroke-width="1"/>
+  <line x1="0" y1="300" x2="1200" y2="300" stroke="#141414" stroke-width="1"/>
+  <line x1="0" y1="400" x2="1200" y2="400" stroke="#141414" stroke-width="1"/>
+  <line x1="0" y1="500" x2="1200" y2="500" stroke="#141414" stroke-width="1"/>
+
+  <!-- Left panel: stats -->
+  <text x="64" y="120" font-family="'Courier New', monospace" font-size="10" fill="#3A3A3A" letter-spacing="3">EMERALD ECHO — COURSE INTELLIGENCE PLATFORM</text>
+  <text x="64" y="142" font-family="'Courier New', monospace" font-size="10" fill="#3A3A3A" letter-spacing="3">EMERALD HIGH SCHOOL · DUBLIN, CA · 2025–26</text>
+
+  <!-- Big stat: 144 -->
+  <text x="64" y="270" font-family="Georgia, serif" font-size="108" fill="#EDEDED" opacity="0.95" font-weight="300">144</text>
+  <text x="64" y="316" font-family="Georgia, serif" font-size="32" fill="#888888" font-weight="300">courses scored</text>
+  <text x="64" y="358" font-family="'Courier New', monospace" font-size="11" fill="#3A3A3A" letter-spacing="2">COGNITIVE LOAD · TIME PRESSURE · EXECUTIVE FUNCTION</text>
+
+  <!-- Dimension pills -->
+  <rect x="64" y="376" width="142" height="26" fill="#131313" rx="2" stroke="#1E1E1E" stroke-width="1"/>
+  <text x="135" y="394" font-family="'Courier New', monospace" font-size="9" fill="#888888" text-anchor="middle" letter-spacing="1">COGNITIVE LOAD</text>
+
+  <rect x="216" y="376" width="134" height="26" fill="#131313" rx="2" stroke="#1E1E1E" stroke-width="1"/>
+  <text x="283" y="394" font-family="'Courier New', monospace" font-size="9" fill="#888888" text-anchor="middle" letter-spacing="1">TIME PRESSURE</text>
+
+  <rect x="360" y="376" width="140" height="26" fill="#131313" rx="2" stroke="#1E1E1E" stroke-width="1"/>
+  <text x="430" y="394" font-family="'Courier New', monospace" font-size="9" fill="#888888" text-anchor="middle" letter-spacing="1">EXEC. FUNCTION</text>
+
+  <!-- Divider vertical -->
+  <line x1="520" y1="80" x2="520" y2="500" stroke="#1E1E1E" stroke-width="1"/>
+
+  <!-- Right panel: phone mockup -->
+  <!-- Phone shell -->
+  <rect x="590" y="60" width="260" height="460" rx="28" fill="#111111" stroke="#2A2A2A" stroke-width="1.5"/>
+  <!-- Status bar notch -->
+  <rect x="690" y="68" width="60" height="14" rx="7" fill="#1A1A1A"/>
+  <!-- Screen area -->
+  <rect x="600" y="92" width="240" height="420" rx="6" fill="#0D0D0D"/>
+
+  <!-- App header -->
+  <rect x="600" y="92" width="240" height="42" rx="0" fill="#111111"/>
+  <text x="720" y="119" font-family="'Courier New', monospace" font-size="11" fill="#EDEDED" text-anchor="middle" letter-spacing="2">EMERALD ECHO</text>
+
+  <!-- Search bar -->
+  <rect x="612" y="144" width="216" height="24" rx="3" fill="#1A1A1A" stroke="#1E1E1E" stroke-width="1"/>
+  <text x="720" y="161" font-family="'Courier New', monospace" font-size="9" fill="#3A3A3A" text-anchor="middle">Search 144 courses...</text>
+
+  <!-- Course card 1: AP Calc BC -->
+  <rect x="612" y="180" width="216" height="58" rx="3" fill="#131313" stroke="#1E1E1E" stroke-width="1"/>
+  <text x="624" y="197" font-family="'Courier New', monospace" font-size="9" fill="#1A5BBF" letter-spacing="1">AP · MATH</text>
+  <text x="624" y="212" font-family="Georgia, serif" font-size="12" fill="#EDEDED">AP Calculus BC</text>
+  <!-- Stress bar -->
+  <rect x="624" y="224" width="192" height="4" rx="2" fill="#1E1E1E"/>
+  <rect x="624" y="224" width="172" height="4" rx="2" fill="#D94F3D"/>
+  <text x="820" y="231" font-family="'Courier New', monospace" font-size="8" fill="#D94F3D" text-anchor="end">8.9</text>
+
+  <!-- Course card 2: AP Computer Science A -->
+  <rect x="612" y="248" width="216" height="58" rx="3" fill="#131313" stroke="#1E1E1E" stroke-width="1"/>
+  <text x="624" y="265" font-family="'Courier New', monospace" font-size="9" fill="#1A5BBF" letter-spacing="1">AP · CS</text>
+  <text x="624" y="280" font-family="Georgia, serif" font-size="12" fill="#EDEDED">AP Computer Science Principles</text>
+  <!-- Stress bar -->
+  <rect x="624" y="292" width="192" height="4" rx="2" fill="#1E1E1E"/>
+  <rect x="624" y="292" width="120" height="4" rx="2" fill="#E8A020"/>
+  <text x="820" y="299" font-family="'Courier New', monospace" font-size="8" fill="#E8A020" text-anchor="end">6.2</text>
+
+  <!-- Course card 3: AP English Language -->
+  <rect x="612" y="316" width="216" height="58" rx="3" fill="#131313" stroke="#1E1E1E" stroke-width="1"/>
+  <text x="624" y="333" font-family="'Courier New', monospace" font-size="9" fill="#1A5BBF" letter-spacing="1">AP · ENGLISH</text>
+  <text x="624" y="348" font-family="Georgia, serif" font-size="12" fill="#EDEDED">AP English Language</text>
+  <!-- Stress bar -->
+  <rect x="624" y="360" width="192" height="4" rx="2" fill="#1E1E1E"/>
+  <rect x="624" y="360" width="136" height="4" rx="2" fill="#E8A020"/>
+  <text x="820" y="367" font-family="'Courier New', monospace" font-size="8" fill="#E8A020" text-anchor="end">7.1</text>
+
+  <!-- Course card 4: AP Statistics (partial) -->
+  <rect x="612" y="384" width="216" height="58" rx="3" fill="#131313" stroke="#1E1E1E" stroke-width="1"/>
+  <text x="624" y="401" font-family="'Courier New', monospace" font-size="9" fill="#1A5BBF" letter-spacing="1">AP · SCIENCE</text>
+  <text x="624" y="416" font-family="Georgia, serif" font-size="12" fill="#EDEDED">AP Chemistry</text>
+  <!-- Stress bar -->
+  <rect x="624" y="428" width="192" height="4" rx="2" fill="#1E1E1E"/>
+  <rect x="624" y="428" width="96" height="4" rx="2" fill="#4A80C0"/>
+  <text x="820" y="435" font-family="'Courier New', monospace" font-size="8" fill="#4A80C0" text-anchor="end">5.0</text>
+
+  <!-- AI simulator badge -->
+  <rect x="880" y="160" width="252" height="200" rx="4" fill="#111111" stroke="#1E1E1E" stroke-width="1"/>
+  <text x="1006" y="186" font-family="'Courier New', monospace" font-size="9" fill="#1A5BBF" text-anchor="middle" letter-spacing="2">AI SEMESTER SIMULATOR</text>
+  <line x1="892" y1="198" x2="1120" y2="198" stroke="#1E1E1E" stroke-width="1"/>
+  <text x="892" y="218" font-family="'Courier New', monospace" font-size="9" fill="#3A3A3A" letter-spacing="1">SCHEDULE SELECTED:</text>
+  <text x="892" y="234" font-family="Georgia, serif" font-size="11" fill="#888888">AP Calc BC + AP CSP</text>
+  <text x="892" y="250" font-family="Georgia, serif" font-size="11" fill="#888888">AP English Lang + AP Chem</text>
+  <line x1="892" y1="264" x2="1120" y2="264" stroke="#1E1E1E" stroke-width="1"/>
+  <text x="892" y="282" font-family="'Courier New', monospace" font-size="9" fill="#3A3A3A" letter-spacing="1">PROJECTED WEEKLY LOAD:</text>
+  <!-- load bar -->
+  <rect x="892" y="290" width="216" height="6" rx="3" fill="#1E1E1E"/>
+  <rect x="892" y="290" width="178" height="6" rx="3" fill="#D94F3D"/>
+  <text x="892" y="314" font-family="'Courier New', monospace" font-size="9" fill="#D94F3D" letter-spacing="1">⚠ HIGH — CONFLICT ZONE DETECTED</text>
+  <text x="892" y="330" font-family="'Courier New', monospace" font-size="9" fill="#3A3A3A">Consider swapping one AP for elective</text>
+  <text x="892" y="348" font-family="'Courier New', monospace" font-size="8" fill="#3A3A3A">Powered by Claude API</text>
+
+  <!-- Footer rule -->
+  <line x1="64" y1="504" x2="1148" y2="504" stroke="#1E1E1E" stroke-width="1"/>
+  <text x="64" y="524" font-family="'Courier New', monospace" font-size="9" fill="#3A3A3A" letter-spacing="2">85 STUDENTS SURVEYED · RUBRIC CALIBRATION · REACT NATIVE + EXPO + SUPABASE + CLAUDE API</text>
+  <text x="64" y="542" font-family="'Courier New', monospace" font-size="9" fill="#3A3A3A" letter-spacing="2">INTERNAL TESTING UNDERWAY · EHS CS CLUB · PUBLIC LAUNCH AT NEXT REGISTRATION CYCLE</text>
+</svg>

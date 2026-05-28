@@ -1,0 +1,75 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 560" fill="none">
+  <!-- Background -->
+  <rect width="1200" height="560" fill="#0A0A0A"/>
+  <!-- Subtle grid -->
+  <line x1="0" y1="100" x2="1200" y2="100" stroke="#141414" stroke-width="1"/>
+  <line x1="0" y1="200" x2="1200" y2="200" stroke="#141414" stroke-width="1"/>
+  <line x1="0" y1="300" x2="1200" y2="300" stroke="#141414" stroke-width="1"/>
+  <line x1="0" y1="400" x2="1200" y2="400" stroke="#141414" stroke-width="1"/>
+  <line x1="0" y1="500" x2="1200" y2="500" stroke="#141414" stroke-width="1"/>
+
+  <!-- Left panel: big stat -->
+  <text x="64" y="120" font-family="'Courier New', monospace" font-size="10" fill="#3A3A3A" letter-spacing="3">PEAK-STRESS WATER INDEX — PSWI</text>
+  <text x="64" y="142" font-family="'Courier New', monospace" font-size="10" fill="#3A3A3A" letter-spacing="3">53 FACILITIES · 8 COMPANIES · 2026</text>
+
+  <!-- Big disparity stat -->
+  <text x="64" y="270" font-family="Georgia, serif" font-size="108" fill="#EDEDED" opacity="0.95" font-weight="300">4,100</text>
+  <text x="64" y="320" font-family="Georgia, serif" font-size="32" fill="#888888" font-weight="300">× disparity</text>
+  <text x="64" y="358" font-family="'Courier New', monospace" font-size="11" fill="#3A3A3A" letter-spacing="2">BEST vs. WORST OPERATOR (WATER STRESS-WEIGHTED)</text>
+
+  <!-- Divider vertical -->
+  <line x1="520" y1="80" x2="520" y2="500" stroke="#1E1E1E" stroke-width="1"/>
+
+  <!-- Right panel: bar chart -->
+  <text x="556" y="120" font-family="'Courier New', monospace" font-size="10" fill="#3A3A3A" letter-spacing="3">PSWI SCORE BY FACILITY (NORMALIZED)</text>
+
+  <!-- Axis -->
+  <line x1="556" y1="148" x2="556" y2="460" stroke="#2A2A2A" stroke-width="1"/>
+
+  <!-- Phoenix, AZ — worst: full bar 580px wide -->
+  <rect x="558" y="154" width="580" height="26" fill="#D94F3D" rx="1"/>
+  <text x="548" y="172" font-family="'Courier New', monospace" font-size="10" fill="#888888" text-anchor="end">Phoenix, AZ</text>
+  <text x="1148" y="172" font-family="'Courier New', monospace" font-size="10" fill="#D94F3D" text-anchor="end">4,100×</text>
+
+  <!-- Dallas, TX: ~2800/4100 * 580 = 396px -->
+  <rect x="558" y="192" width="396" height="26" fill="#D94F3D" rx="1" opacity="0.80"/>
+  <text x="548" y="210" font-family="'Courier New', monospace" font-size="10" fill="#888888" text-anchor="end">Dallas, TX</text>
+  <text x="1148" y="210" font-family="'Courier New', monospace" font-size="10" fill="#888888" text-anchor="end">2,800×</text>
+
+  <!-- Las Vegas, NV: ~2100/4100 * 580 = 297px -->
+  <rect x="558" y="230" width="297" height="26" fill="#E06030" rx="1" opacity="0.80"/>
+  <text x="548" y="248" font-family="'Courier New', monospace" font-size="10" fill="#888888" text-anchor="end">Las Vegas, NV</text>
+  <text x="1148" y="248" font-family="'Courier New', monospace" font-size="10" fill="#888888" text-anchor="end">2,100×</text>
+
+  <!-- Mesa, AZ: ~1500/4100 * 580 = 212px -->
+  <rect x="558" y="268" width="212" height="26" fill="#C08030" rx="1" opacity="0.75"/>
+  <text x="548" y="286" font-family="'Courier New', monospace" font-size="10" fill="#888888" text-anchor="end">Mesa, AZ</text>
+  <text x="1148" y="286" font-family="'Courier New', monospace" font-size="10" fill="#888888" text-anchor="end">1,500×</text>
+
+  <!-- Separator dashes -->
+  <line x1="556" y1="308" x2="1148" y2="308" stroke="#1E1E1E" stroke-width="1" stroke-dasharray="5 5"/>
+  <text x="852" y="324" font-family="'Courier New', monospace" font-size="9" fill="#3A3A3A" text-anchor="middle" letter-spacing="2">LOW-STRESS OPERATORS</text>
+
+  <!-- Dublin, IE: 180/4100 * 580 = 25px -->
+  <rect x="558" y="330" width="26" height="26" fill="#4A80C0" rx="1" opacity="0.70"/>
+  <text x="548" y="348" font-family="'Courier New', monospace" font-size="10" fill="#888888" text-anchor="end">Dublin, Ireland</text>
+  <text x="1148" y="348" font-family="'Courier New', monospace" font-size="10" fill="#888888" text-anchor="end">180×</text>
+
+  <!-- Stockholm, SE: 22/4100 * 580 = 3px (show minimum 6px) -->
+  <rect x="558" y="368" width="6" height="26" fill="#2A60A0" rx="1" opacity="0.80"/>
+  <text x="548" y="386" font-family="'Courier New', monospace" font-size="10" fill="#888888" text-anchor="end">Stockholm, SE</text>
+  <text x="1148" y="386" font-family="'Courier New', monospace" font-size="10" fill="#888888" text-anchor="end">22×</text>
+
+  <!-- Hamina, FI — best: 1/4100 (show as thin stub) -->
+  <rect x="558" y="406" width="3" height="26" fill="#1A5BBF" rx="1"/>
+  <text x="548" y="424" font-family="'Courier New', monospace" font-size="10" fill="#EDEDED" text-anchor="end">Hamina, Finland</text>
+  <text x="1148" y="424" font-family="'Courier New', monospace" font-size="10" fill="#1A5BBF" text-anchor="end">1×</text>
+
+  <!-- Bottom axis -->
+  <line x1="556" y1="444" x2="1148" y2="444" stroke="#2A2A2A" stroke-width="1"/>
+
+  <!-- Footer rule -->
+  <line x1="64" y1="504" x2="1148" y2="504" stroke="#1E1E1E" stroke-width="1"/>
+  <text x="64" y="524" font-family="'Courier New', monospace" font-size="9" fill="#3A3A3A" letter-spacing="2">10% WORKLOAD REALLOCATION TO LOW-STRESS REGIONS → 33% REDUCTION IN FLEET-WIDE WATER STRESS</text>
+  <text x="64" y="542" font-family="'Courier New', monospace" font-size="9" fill="#3A3A3A" letter-spacing="2">MONTE CARLO SENSITIVITY: ρ = 0.982 · n = 1,000 RUNS · ±50% COEFFICIENT PERTURBATION</text>
+</svg>

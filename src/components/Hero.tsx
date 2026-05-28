@@ -81,58 +81,59 @@ export default function Hero() {
         perspective: "1200px",
       }}
     >
-      {/* ── Portrait — right half, vertically centred in viewport ── */}
-      <motion.div
-        className="absolute hidden md:block"
-        style={{
-          right: "clamp(1.5rem, 5vw, 5rem)",
-          top: "12%",
-          transform: "translateY(-10%)",
-          width: "clamp(280px, 26vw, 400px)",
-          height: "70vh",
-          overflow: "hidden",
-        }}
-        initial={{ opacity: 0, scale: 0.97 }}
-        animate={{ opacity: 1, scale: 1 }}
-        transition={{ duration: 1.1, delay: firstDelay + 0.1, ease: easeOutExpo }}
-      >
-        <Image
-          src="/hrihaan.png"
-          alt="Hrihaan Bhutani"
-          fill
-          priority
-          sizes="(max-width: 1440px) 26vw, 400px"
-          style={{
-            objectFit: "cover",
-            objectPosition: "center top",
-            filter: "grayscale(8%) contrast(1.06)",
-          }}
-        />
-        {/* Fade top + bottom edges into canvas */}
-        <div
-          style={{
-            position: "absolute",
-            inset: 0,
-            background:
-              "linear-gradient(to bottom, var(--bg) 0%, transparent 18%, transparent 72%, var(--bg) 100%)",
-            pointerEvents: "none",
-          }}
-        />
-      </motion.div>
-
       <div className="container-ed">
 
-        {/* ── Name ── */}
-        <motion.div
-          style={{ rotateX, rotateY, transformStyle: "preserve-3d" }}
-          className="mb-6 md:mb-8 select-none"
-        >
-          <div className="text-hero" style={{ color: "var(--fg)" }}>
-            <SplitWord word={FIRST} baseDelay={firstDelay} />
-            <br />
-            <SplitWord word={LAST}  baseDelay={lastDelay} />
-          </div>
-        </motion.div>
+        {/* ── Name + Portrait — side by side, bottoms aligned ── */}
+        <div className="grid grid-cols-12 gap-x-6 md:gap-x-10 items-end mb-6 md:mb-8">
+
+          {/* Name */}
+          <motion.div
+            style={{ rotateX, rotateY, transformStyle: "preserve-3d" }}
+            className="col-span-12 md:col-span-8 select-none"
+          >
+            <div className="text-hero" style={{ color: "var(--fg)" }}>
+              <SplitWord word={FIRST} baseDelay={firstDelay} />
+              <br />
+              <SplitWord word={LAST}  baseDelay={lastDelay} />
+            </div>
+          </motion.div>
+
+          {/* Portrait */}
+          <motion.div
+            className="hidden md:block md:col-span-4"
+            style={{
+              position: "relative",
+              height: "clamp(340px, 48vh, 520px)",
+              overflow: "hidden",
+            }}
+            initial={{ opacity: 0, scale: 0.97 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 1.1, delay: firstDelay + 0.1, ease: easeOutExpo }}
+          >
+            <Image
+              src="/hrihaan.png"
+              alt="Hrihaan Bhutani"
+              fill
+              priority
+              sizes="(max-width: 1440px) 33vw, 440px"
+              style={{
+                objectFit: "cover",
+                objectPosition: "center top",
+                filter: "grayscale(8%) contrast(1.06)",
+              }}
+            />
+            {/* Soft fade so the base grounds into the canvas */}
+            <div
+              style={{
+                position: "absolute",
+                inset: 0,
+                background:
+                  "linear-gradient(to bottom, transparent 0%, transparent 82%, var(--bg) 100%)",
+                pointerEvents: "none",
+              }}
+            />
+          </motion.div>
+        </div>
 
         {/* ── Rule ── */}
         <FadeUp delay={afterDelay}>

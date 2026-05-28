@@ -5,10 +5,10 @@ import Link from "next/link";
 import ThemeToggle from "./ThemeToggle";
 
 const navLinks = [
-  { href: "#work",       label: "Work" },
-  { href: "#leadership", label: "Leadership" },
-  { href: "#now",        label: "Now" },
-  { href: "#contact",    label: "Contact" },
+  { href: "/about",      label: "About" },
+  { href: "/#work",      label: "Work" },
+  { href: "/#leadership",label: "Leadership" },
+  { href: "/#contact",   label: "Contact" },
 ];
 
 export default function Nav() {
@@ -49,14 +49,14 @@ export default function Nav() {
         {/* Nav links */}
         <nav className="hidden md:flex items-center gap-8">
           {navLinks.map((l) => (
-            <a
+            <Link
               key={l.href}
               href={l.href}
               className="text-label transition-opacity duration-200 hover:opacity-100"
               style={{ color: "var(--fg-muted)", opacity: 0.7 }}
             >
               {l.label}
-            </a>
+            </Link>
           ))}
         </nav>
 

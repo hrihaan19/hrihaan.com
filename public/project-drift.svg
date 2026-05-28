@@ -1,0 +1,83 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 560" fill="none">
+  <!-- Background -->
+  <rect width="1200" height="560" fill="#0A0A0A"/>
+  <!-- Subtle grid -->
+  <line x1="0" y1="100" x2="1200" y2="100" stroke="#141414" stroke-width="1"/>
+  <line x1="0" y1="200" x2="1200" y2="200" stroke="#141414" stroke-width="1"/>
+  <line x1="0" y1="300" x2="1200" y2="300" stroke="#141414" stroke-width="1"/>
+  <line x1="0" y1="400" x2="1200" y2="400" stroke="#141414" stroke-width="1"/>
+  <line x1="0" y1="500" x2="1200" y2="500" stroke="#141414" stroke-width="1"/>
+
+  <!-- Left header -->
+  <text x="64" y="120" font-family="'Courier New', monospace" font-size="10" fill="#3A3A3A" letter-spacing="3">DRIFT — BAY AREA TEEN EVENT LAYER</text>
+  <text x="64" y="142" font-family="'Courier New', monospace" font-size="10" fill="#3A3A3A" letter-spacing="3">SCRAPE · CLASSIFY · DEDUPLICATE · DELIVER</text>
+
+  <!-- Big stat -->
+  <text x="64" y="268" font-family="Georgia, serif" font-size="92" fill="#EDEDED" opacity="0.95" font-weight="300">Weekly</text>
+  <text x="64" y="310" font-family="Georgia, serif" font-size="30" fill="#888888" font-weight="300">curated digest</text>
+
+  <!-- Pipeline -->
+  <text x="64" y="350" font-family="'Courier New', monospace" font-size="9" fill="#3A3A3A" letter-spacing="2">AUTOMATED PIPELINE</text>
+
+  <rect x="64" y="362" width="90" height="40" rx="3" fill="#131313" stroke="#1E1E1E" stroke-width="1"/>
+  <text x="109" y="386" font-family="'Courier New', monospace" font-size="9" fill="#888888" text-anchor="middle" letter-spacing="1">SCRAPE</text>
+  <text x="162" y="387" font-family="'Courier New', monospace" font-size="11" fill="#3A3A3A" text-anchor="middle">›</text>
+
+  <rect x="176" y="362" width="90" height="40" rx="3" fill="#131313" stroke="#1E1E1E" stroke-width="1"/>
+  <text x="221" y="386" font-family="'Courier New', monospace" font-size="9" fill="#4A80C0" text-anchor="middle" letter-spacing="1">CLASSIFY</text>
+  <text x="274" y="387" font-family="'Courier New', monospace" font-size="11" fill="#3A3A3A" text-anchor="middle">›</text>
+
+  <rect x="288" y="362" width="90" height="40" rx="3" fill="#131313" stroke="#1E1E1E" stroke-width="1"/>
+  <text x="333" y="386" font-family="'Courier New', monospace" font-size="9" fill="#4A80C0" text-anchor="middle" letter-spacing="1">DEDUPE</text>
+  <text x="386" y="387" font-family="'Courier New', monospace" font-size="11" fill="#3A3A3A" text-anchor="middle">›</text>
+
+  <rect x="400" y="362" width="90" height="40" rx="3" fill="#131313" stroke="#1E1E1E" stroke-width="1"/>
+  <text x="445" y="386" font-family="'Courier New', monospace" font-size="9" fill="#888888" text-anchor="middle" letter-spacing="1">SEND</text>
+
+  <text x="64" y="430" font-family="'Courier New', monospace" font-size="9" fill="#3A3A3A" letter-spacing="1">Claude API classifies for teen relevance + deduplicates</text>
+  <text x="64" y="448" font-family="'Courier New', monospace" font-size="9" fill="#3A3A3A" letter-spacing="1">GitHub Actions cron runs the chain weekly — unattended</text>
+
+  <!-- Divider vertical -->
+  <line x1="540" y1="80" x2="540" y2="490" stroke="#1E1E1E" stroke-width="1"/>
+
+  <!-- Right: email digest mockup -->
+  <rect x="600" y="76" width="540" height="408" rx="6" fill="#111111" stroke="#2A2A2A" stroke-width="1.5"/>
+  <!-- email header -->
+  <path d="M600 82 a6 6 0 0 1 6 -6 h528 a6 6 0 0 1 6 6 v58 h-540 z" fill="#131313"/>
+  <text x="624" y="106" font-family="'Courier New', monospace" font-size="10" fill="#4A80C0" letter-spacing="2">DRIFT WEEKLY</text>
+  <text x="624" y="127" font-family="Georgia, serif" font-size="15" fill="#EDEDED">This week in the Tri-Valley — 7 picks</text>
+  <line x1="600" y1="140" x2="1140" y2="140" stroke="#1E1E1E" stroke-width="1"/>
+
+  <!-- Event card 1 -->
+  <rect x="620" y="156" width="500" height="64" rx="3" fill="#0D0D0D" stroke="#1E1E1E" stroke-width="1"/>
+  <rect x="632" y="168" width="84" height="18" rx="2" fill="#131313" stroke="#1E1E1E" stroke-width="1"/>
+  <text x="674" y="181" font-family="'Courier New', monospace" font-size="8" fill="#4A80C0" text-anchor="middle" letter-spacing="1">WORKSHOP</text>
+  <text x="632" y="208" font-family="Georgia, serif" font-size="13" fill="#EDEDED">Intro to Robotics — Dublin Library</text>
+  <text x="1108" y="181" font-family="'Courier New', monospace" font-size="9" fill="#888888" text-anchor="end">SAT 6/14</text>
+
+  <!-- Event card 2 -->
+  <rect x="620" y="234" width="500" height="64" rx="3" fill="#0D0D0D" stroke="#1E1E1E" stroke-width="1"/>
+  <rect x="632" y="246" width="92" height="18" rx="2" fill="#131313" stroke="#1E1E1E" stroke-width="1"/>
+  <text x="678" y="259" font-family="'Courier New', monospace" font-size="8" fill="#E8A020" text-anchor="middle" letter-spacing="1">HACKATHON</text>
+  <text x="632" y="286" font-family="Georgia, serif" font-size="13" fill="#EDEDED">Tri-Valley Teen Hack — Pleasanton</text>
+  <text x="1108" y="259" font-family="'Courier New', monospace" font-size="9" fill="#888888" text-anchor="end">SUN 6/15</text>
+
+  <!-- Event card 3 -->
+  <rect x="620" y="312" width="500" height="64" rx="3" fill="#0D0D0D" stroke="#1E1E1E" stroke-width="1"/>
+  <rect x="632" y="324" width="86" height="18" rx="2" fill="#131313" stroke="#1E1E1E" stroke-width="1"/>
+  <text x="675" y="337" font-family="'Courier New', monospace" font-size="8" fill="#4A80C0" text-anchor="middle" letter-spacing="1">VOLUNTEER</text>
+  <text x="632" y="364" font-family="Georgia, serif" font-size="13" fill="#EDEDED">Creek Cleanup — San Ramon</text>
+  <text x="1108" y="337" font-family="'Courier New', monospace" font-size="9" fill="#888888" text-anchor="end">SAT 6/21</text>
+
+  <!-- Event card 4 -->
+  <rect x="620" y="390" width="500" height="64" rx="3" fill="#0D0D0D" stroke="#1E1E1E" stroke-width="1"/>
+  <rect x="632" y="402" width="72" height="18" rx="2" fill="#131313" stroke="#1E1E1E" stroke-width="1"/>
+  <text x="668" y="415" font-family="'Courier New', monospace" font-size="8" fill="#4A80C0" text-anchor="middle" letter-spacing="1">MEETUP</text>
+  <text x="632" y="442" font-family="Georgia, serif" font-size="13" fill="#EDEDED">Teen Coding Night — Danville</text>
+  <text x="1108" y="415" font-family="'Courier New', monospace" font-size="9" fill="#888888" text-anchor="end">WED 6/25</text>
+
+  <!-- Footer rule -->
+  <line x1="64" y1="504" x2="1136" y2="504" stroke="#1E1E1E" stroke-width="1"/>
+  <text x="64" y="524" font-family="'Courier New', monospace" font-size="9" fill="#3A3A3A" letter-spacing="2">AUTOMATED PIPELINE · GITHUB ACTIONS CRON · NEXT.JS + SUPABASE + CLAUDE API + RESEND</text>
+  <text x="64" y="542" font-family="'Courier New', monospace" font-size="9" fill="#3A3A3A" letter-spacing="2">SOURCES AGGREGATED WEEKLY · CLASSIFIED FOR TEEN RELEVANCE · DEDUPLICATED · DELIVERED</text>
+</svg>

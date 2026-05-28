@@ -15,11 +15,13 @@ const education = {
   gpa: null,
   scores: "SAT 1520 · 800 Math",
   coursework: [
-    "AP Computer Science A",
+    "AP Computer Science Applications",
+    "AP Computer Science Principles",
     "AP Calculus BC",
-    "AP Statistics",
-    "AP Biology",
+    "AP Calculus AB",
+    "AP Seminar",
     "AP English Language",
+    "AP Chemistry",
   ],
 };
 
