@@ -9,7 +9,7 @@
   <line x1="0" y1="500" x2="1200" y2="500" stroke="#141414" stroke-width="1"/>
 
   <!-- Left panel: stats -->
-  <text x="64" y="120" font-family="'Courier New', monospace" font-size="10" fill="#3A3A3A" letter-spacing="3">EMERALD ECHO — COURSE INTELLIGENCE PLATFORM</text>
+  <text x="64" y="120" font-family="'Courier New', monospace" font-size="10" fill="#3A3A3A" letter-spacing="3">EMERALD ECHO · COURSE INTELLIGENCE PLATFORM</text>
   <text x="64" y="142" font-family="'Courier New', monospace" font-size="10" fill="#3A3A3A" letter-spacing="3">EMERALD HIGH SCHOOL · DUBLIN, CA · 2025–26</text>
 
   <!-- Big stat: 144 -->
@@ -94,7 +94,7 @@
   <!-- load bar -->
   <rect x="892" y="290" width="216" height="6" rx="3" fill="#1E1E1E"/>
   <rect x="892" y="290" width="178" height="6" rx="3" fill="#D94F3D"/>
-  <text x="892" y="314" font-family="'Courier New', monospace" font-size="9" fill="#D94F3D" letter-spacing="1">⚠ HIGH — CONFLICT ZONE DETECTED</text>
+  <text x="892" y="314" font-family="'Courier New', monospace" font-size="9" fill="#D94F3D" letter-spacing="1">⚠ HIGH · CONFLICT ZONE DETECTED</text>
   <text x="892" y="330" font-family="'Courier New', monospace" font-size="9" fill="#3A3A3A">Consider swapping one AP for elective</text>
   <text x="892" y="348" font-family="'Courier New', monospace" font-size="8" fill="#3A3A3A">Powered by Claude API</text>
 

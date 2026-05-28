@@ -36,17 +36,17 @@ const currentProjects = [
   {
     name: "Emerald Echo",
     href: "/work/emerald-echo",
-    desc: "Course intelligence platform for EHS — 144 courses scored across Cognitive Load, Time Pressure, and Executive Function. The AI Semester Simulator lets students model a full schedule before registration.",
+    desc: "A course tool for EHS where I scored all 144 courses on Cognitive Load, Time Pressure, and Executive Function. The AI Semester Simulator lets students test a full schedule before they register.",
   },
   {
     name: "Hidden Currents",
     href: "/work/hidden-currents",
-    desc: "Independent research introducing the Peak-Stress Water Index, a new metric exposing the true environmental impact of AI data center water consumption across 53 hyperscale facilities worldwide.",
+    desc: "My own research introducing the Peak-Stress Water Index, a new metric that shows the real environmental cost of the water AI data centers use, measured across 53 large facilities worldwide.",
   },
   {
     name: "Drift",
     href: "/work/drift",
-    desc: "A Bay Area teen event aggregation platform. A scraper surfaces events that never appear on Eventbrite or Instagram; Claude classifies and deduplicates; a weekly digest goes out via email.",
+    desc: "A platform that pulls together Bay Area teen events. A scraper finds events that never show up on Eventbrite or Instagram, Claude sorts them and removes duplicates, and a weekly digest goes out by email.",
   },
 ];
 
@@ -164,11 +164,11 @@ export default function AboutPage() {
                   marginBottom: "1.2rem",
                 }}
               >
-                I am a junior at Emerald High School in Dublin, California, graduating in June 2027.
-                I build software and conduct independent research at the intersection of technology,
-                data, and public policy. Most of my time outside school goes toward building tools
-                that solve real problems — for students at my school, for researchers, and for
-                communities navigating complex systems.
+                I&apos;m a junior at Emerald High School in Dublin, California, and I graduate in
+                June 2027. I build software and do my own research around technology, data, and
+                public policy. Most of my time outside of school goes into building tools that
+                solve real problems, whether that&apos;s for students at my school, for researchers,
+                or for communities trying to deal with complicated systems.
               </p>
               <p
                 style={{
@@ -180,10 +180,11 @@ export default function AboutPage() {
                   maxWidth: "62ch",
                 }}
               >
-                I am also interested in how technology creates or conceals policy problems — and in
-                building the analytical tools that make those problems legible. My research on AI
-                data center water stress grew from noticing that the industry's standard reporting
-                metrics were designed to obscure geographic variation in scarcity, not to expose it.
+                I&apos;m also really interested in how technology can either cause policy problems
+                or hide them, and in building the tools that make those problems easier to see. My
+                research on AI data center water stress started when I noticed that the industry&apos;s
+                standard reporting metrics seemed built to hide where water is actually scarce,
+                instead of showing it.
               </p>
             </motion.div>
 
@@ -253,11 +254,11 @@ export default function AboutPage() {
                   marginBottom: "1.2rem",
                 }}
               >
-                My long-term interest is in systems where technology and policy intersect —
-                environmental disclosure, AI governance, and the ways that measurement choices
-                determine what gets acted on. I want to build software that surfaces these dynamics
-                in concrete, actionable ways, and to pursue research that informs real regulatory
-                and institutional decisions.
+                Long term, I&apos;m interested in places where technology and policy run into each
+                other: environmental disclosure, AI governance, and the way the things we choose to
+                measure end up deciding what actually gets fixed. I want to build software that
+                makes these problems concrete enough to act on, and do research that feeds into
+                real decisions by regulators and institutions.
               </p>
               <p
                 style={{
@@ -269,10 +270,10 @@ export default function AboutPage() {
                   maxWidth: "62ch",
                 }}
               >
-                Short-term, I am focused on launching Emerald Echo at EHS before the next
-                registration cycle, completing the Hidden Currents working paper for conference
-                submission, and deepening my understanding of machine learning through the
-                CNN/Alzheimer's research project.
+                Short term, I&apos;m focused on launching Emerald Echo at EHS before the next
+                registration cycle, finishing the Hidden Currents paper for conference submission,
+                and getting a deeper understanding of machine learning through the
+                CNN/Alzheimer&apos;s research project.
               </p>
             </motion.div>
 

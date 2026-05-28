@@ -6,7 +6,7 @@ import AboutPage from "./AboutPage";
 export const metadata: Metadata = {
   title: "About",
   description:
-    "Hrihaan Bhutani — builder, researcher, and Student Board Trustee at Emerald High School in Dublin, CA. Class of 2027.",
+    "Hrihaan Bhutani is a builder, researcher, and Student Board Trustee at Emerald High School in Dublin, CA. Class of 2027.",
 };
 
 export default function About() {

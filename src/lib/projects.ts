@@ -44,9 +44,9 @@ export const projects: Project[] = [
     slug: "hidden-currents",
     title: "Hidden Currents",
     subtitle:
-      "A Peak-Stress Water Index that exposes how AI data centers stress local water supplies — and makes the invisible visible across 53 facilities worldwide.",
+      "A water index I built that measures how much AI data centers strain local water supplies, scored across 53 facilities around the world.",
     description:
-      "The industry's standard metric (WUE) treats a liter of water in drought-stricken Phoenix the same as one in Finland. PSWI fixes this by multiplying peak water use with location-specific stress data from WRI Aqueduct. Applied to 53 hyperscale facilities from 8 companies, it reveals a 4,100× disparity between best and worst operators — and quantifies how 10% workload reallocation cuts fleet-wide water stress by 33%. The paper proposes SEC-style mandatory disclosure with quarterly per-facility PSWI reporting.",
+      "The metric the industry uses (WUE) counts a liter of water in dried-out Phoenix the same as a liter in Finland, which never made sense to me. My index, PSWI, fixes that by multiplying peak water use by how stressed the local water supply actually is, using data from WRI Aqueduct. I ran it on 53 large facilities from 8 companies and found a 4,100x gap between the best and worst operators. I also found that moving just 10% of the workload to less stressed regions would cut the whole fleet's water stress by 33%. The paper ends with a proposal for SEC-style rules that would make companies report this every quarter.",
     stack: ["Python", "Pandas", "NumPy", "Matplotlib", "SciPy", "LaTeX"],
     role: "Sole Author",
     status: "research",
@@ -59,22 +59,22 @@ export const projects: Project[] = [
     course: "Independent Research",
     image: "/project-hidden-currents.svg",
     objective:
-      "Develop and validate a new metric — the Peak-Stress Water Index (PSWI) — to accurately measure AI data center water impact by accounting for geographic water scarcity, then apply it across the industry's largest operators to reveal the true distribution of environmental risk.",
+      "Build and test a new metric, the Peak-Stress Water Index (PSWI), that measures the water impact of AI data centers while actually accounting for how scarce water is where each one sits, then run it across the biggest operators to see who carries the real environmental risk.",
     responsibilities: [
-      "Reviewed and critiqued existing water efficiency metrics (WUE, WPUe, EWIF) and identified their fundamental failure to incorporate geographic water scarcity",
-      "Collected and verified publicly disclosed water consumption data for 53 hyperscale and colocation facilities across 8 major technology companies",
-      "Built the PSWI calculation pipeline in Python using Pandas and NumPy",
-      "Geocoded all 53 facilities and extracted WRI Aqueduct 4.0 Baseline Water Stress scores for each geographic location",
-      "Designed and ran 1,000-iteration Monte Carlo sensitivity analysis (±50% coefficient perturbation) to validate ranking stability across uncertainty ranges",
-      "Wrote the complete research paper, including a policy proposal for SEC-style mandatory PSWI disclosure requirements",
-      "Published the full dataset and all analysis code as open source on GitHub",
+      "Read through the existing water metrics (WUE, WPUe, EWIF) and figured out why they all miss the same thing: where the water actually comes from",
+      "Collected and double-checked the public water use data for 53 large data center and colocation facilities across 8 big tech companies",
+      "Wrote the PSWI calculation pipeline in Python with Pandas and NumPy",
+      "Found the exact location of all 53 facilities and pulled the WRI Aqueduct 4.0 water stress score for each one",
+      "Ran a 1,000-iteration Monte Carlo sensitivity analysis (shifting the coefficients by up to 50% in either direction) to check that the rankings held up",
+      "Wrote the full paper, including a policy proposal for SEC-style rules that would require companies to report PSWI",
+      "Put the whole dataset and all of my code on GitHub so anyone can check it",
     ],
     whatILearned: [
-      "How to combine geospatial scarcity data with facility-level operational data to construct novel composite metrics that reveal what single-variable metrics conceal",
-      "Monte Carlo simulation for quantifying uncertainty in ranked data — achieving ρ = 0.982 Spearman rank correlation confirmed the metric's robustness under realistic error ranges",
-      "The gap between what voluntary corporate sustainability disclosures reveal and what they strategically leave out about environmental impact",
-      "How to structure a technical policy argument within a research paper, targeting both scientific reviewers and regulatory audiences simultaneously",
-      "Sensitivity analysis methodology — how to stress-test a model's conclusions against its own assumptions, and how to present that honestly",
+      "How to combine location-based scarcity data with each facility's own numbers to build a metric that shows what a single number like WUE hides",
+      "How to use Monte Carlo simulation to measure uncertainty in a ranking. Getting a Spearman correlation of 0.982 told me the ranking wasn't going to flip around just because my inputs were a little off",
+      "How big the gap is between what companies put in their sustainability reports and what they quietly leave out",
+      "How to build a policy argument inside a research paper so it works for both science reviewers and the people who actually write regulations",
+      "How to stress-test my own conclusions against my own assumptions, and how to be honest about it when I present the results",
     ],
     documentation: [
       { label: "GitHub Repository & Dataset", href: "https://github.com/hrihaan19/pswi-data-center-audit" },
@@ -82,15 +82,15 @@ export const projects: Project[] = [
     sections: [
       {
         heading: "Context",
-        body: "AI data centers consume tens of billions of gallons of water annually for cooling. As AI compute demand grows, this consumption is increasing — but the industry reports it through WUE, a metric that makes a liter of water consumed in Phoenix identical to one in Finland. This geographic blindness lets companies report 'improving' efficiency metrics while simultaneously expanding in water-stressed regions. I noticed this contradiction in public sustainability reports from several major operators and started this project to quantify it rigorously.",
+        body: "AI data centers use tens of billions of gallons of water a year just for cooling, and that number keeps going up as AI gets bigger. The problem is that the industry reports it with WUE, a metric that counts a liter of water in Phoenix the same as a liter in Finland. Because WUE ignores location, a company can show an 'improving' efficiency number while it keeps building in places that are already running out of water. I kept seeing this contradiction in the sustainability reports of a few major operators, so I started this project to actually measure it.",
       },
       {
         heading: "Approach",
-        body: "I collected publicly disclosed water data for 53 hyperscale and colocation facilities, then geocoded each to extract WRI Aqueduct 4.0 baseline water stress scores. PSWI multiplies peak annual water consumption by the local Baseline Water Stress coefficient. To validate the ranking's stability, I ran 1,000 Monte Carlo iterations perturbing both consumption and stress coefficients by ±50%. The Spearman rank correlation of ρ = 0.982 confirms the ranking is robust to measurement uncertainty — a facility ranking poorly does not escape that ranking just because its reported consumption figures are imprecise.",
+        body: "I collected the public water data for 53 large facilities and found the exact location of each one so I could pull its WRI Aqueduct 4.0 water stress score. PSWI just multiplies a facility's peak yearly water use by that local stress score. To make sure the ranking wasn't fragile, I ran 1,000 Monte Carlo iterations that shifted both the water numbers and the stress scores by up to 50% in either direction. The Spearman correlation came out to 0.982, which means the ranking barely moves even when the inputs are off. A facility that ranks badly doesn't get to climb out of it just because its reported numbers aren't exact.",
       },
       {
         heading: "Key Findings",
-        body: "The 53-facility audit reveals a 4,100× disparity between the best operator (Google's Hamina, Finland facility) and the worst. Applied at the fleet level, a 10% workload reallocation from high-stress to low-stress regions reduces fleet-wide water stress by 33% without reducing compute capacity. The paper proposes SEC-style mandatory quarterly PSWI disclosure for any company operating hyperscale data centers — a policy that would make this data routinely available rather than requiring individual researchers to reconstruct it from scattered voluntary disclosures.",
+        body: "Across all 53 facilities, there is a 4,100x gap between the best operator (Google's site in Hamina, Finland) and the worst. When I looked at the whole fleet together, moving just 10% of the workload from high-stress regions to low-stress ones cut the fleet's total water stress by 33%, and it didn't cost any computing power to do it. The paper proposes SEC-style rules that would make every company running large data centers report its PSWI every quarter, so this data would just be available instead of something a student has to piece together from scattered reports.",
       },
     ],
   },
@@ -98,9 +98,9 @@ export const projects: Project[] = [
     slug: "thirsty-compute-atlas",
     title: "Thirsty Compute Atlas",
     subtitle:
-      "A reproducible pipeline estimating the water footprint of every US data center — state by state, scope by scope.",
+      "An open pipeline that estimates the water footprint of every US data center, broken down by state and by scope.",
     description:
-      "An open pipeline that combines 1,474 IM3-Atlas facility locations with published water-intensity coefficients to produce state-level estimates of US data center water consumption. Separates scope-1 cooling and scope-2 grid-embedded water. Full sensitivity analysis included — swap in new coefficients, re-run, get updated numbers. The pipeline is the product.",
+      "It takes 1,474 facility locations from the IM3 Atlas and combines them with published water-intensity numbers to estimate how much water US data centers use, state by state. It keeps scope-1 cooling water separate from scope-2 water that comes from the power grid. There's a full sensitivity analysis built in, so if better coefficients come out you just swap them in, re-run it, and get new numbers. The pipeline itself is the point.",
     stack: ["Python", "Pandas", "NumPy", "Matplotlib"],
     role: "Sole Author",
     status: "research",
@@ -116,9 +116,9 @@ export const projects: Project[] = [
     slug: "emerald-echo",
     title: "Emerald Echo",
     subtitle:
-      "Course intelligence for EHS — every class rated on Cognitive Load, Time Pressure, and Executive Function before you sign up for it.",
+      "A course tool for EHS that rates every class on Cognitive Load, Time Pressure, and Executive Function before you sign up for it.",
     description:
-      "144 courses scored across the Emerald High catalog. Students rate each class across three dimensions — producing a Stress Factor score that actually means something. An AI Semester Simulator powered by the Claude API lets you model a full schedule before you commit: see projected weekly load, identify conflict zones, compare paths.",
+      "I scored all 144 courses in the Emerald High catalog. Students rate each class on three things, which turns into a Stress Factor score that actually tells you something. There's also an AI Semester Simulator built on the Claude API that lets you test a full schedule before you commit, so you can see your projected weekly load, spot the weeks that are going to pile up, and compare different paths.",
     stack: ["React Native", "Expo", "Supabase", "Claude API", "JavaScript"],
     role: "Builder",
     status: "building",
@@ -130,38 +130,38 @@ export const projects: Project[] = [
     course: "AP Computer Science Applications / Independent Study",
     image: "/project-emerald-echo.svg",
     objective:
-      "Build a course intelligence platform that gives EHS students data-driven insight into course difficulty before registration — and add an AI Semester Simulator that lets students model projected weekly workload for any schedule combination before committing.",
+      "Build a tool that gives EHS students real data on how hard a course is before they register, and add an AI Semester Simulator that lets them see the projected weekly workload for any combination of classes before they lock it in.",
     responsibilities: [
-      "Designed the three-dimension scoring rubric (Cognitive Load, Time Pressure, Executive Function) based on student workload research",
-      "Surveyed 85 EHS students across grade levels to calibrate the scoring system and validate rubric consistency",
-      "Rated all 144 courses in the EHS catalog using the calibrated rubric",
-      "Built the full mobile application in React Native and Expo, targeting both iOS and Android",
-      "Designed the Supabase database schema for courses, ratings, user schedules, and simulations",
-      "Integrated the Claude API to power the Semester Simulator — models projected weekly workload and surfaces schedule conflict zones",
-      "Conducting ongoing internal testing with CS Club members at EHS and iterating on UI based on feedback",
+      "Designed the three-part scoring rubric (Cognitive Load, Time Pressure, Executive Function) based on research on student workload",
+      "Surveyed 85 EHS students across all grade levels to calibrate the scoring and make sure it stayed consistent",
+      "Scored all 144 courses in the EHS catalog using that rubric",
+      "Built the whole mobile app in React Native and Expo for both iOS and Android",
+      "Designed the Supabase database for the courses, ratings, saved schedules, and simulations",
+      "Connected the Claude API to run the Semester Simulator, which projects the weekly workload and flags the weeks that are going to overload you",
+      "Running internal testing with CS Club members at EHS right now and changing the UI based on what they say",
     ],
     whatILearned: [
-      "Mobile app development with React Native and Expo — a fundamentally different mental model from web development, especially around navigation patterns and native UI components",
-      "AI API integration for user-facing features: prompt engineering, handling variable-length model responses, and managing latency expectations in a mobile app context",
-      "Database schema design for a multi-user application with user-generated ratings and saved schedule data",
-      "How to calibrate a rating system for cross-rater consistency — the calibration survey was more difficult to design correctly than the app itself",
-      "Product iteration from real user feedback: what early testers actually found confusing versus what I had assumed would be confusing",
+      "How to build mobile apps with React Native and Expo, which is a pretty different way of thinking than web development, especially the navigation and the native UI components",
+      "How to put an AI API into a feature people actually use: writing the prompts, handling responses that come back different lengths, and dealing with the wait time inside a mobile app",
+      "How to design a database for a multi-user app where people create their own ratings and save their own schedules",
+      "How to calibrate a rating system so two different people score the same class the same way. The calibration survey was honestly harder to get right than the app itself",
+      "How to improve a product from real feedback. What early testers got confused by was usually not what I assumed they would get confused by",
     ],
     documentation: [
-      { label: "In Active Development — Launching at EHS Registration", href: "#" },
+      { label: "In active development, launching at EHS registration", href: "#" },
     ],
     sections: [
       {
         heading: "Context",
-        body: "EHS students have no data-driven way to know how a course will feel before they take it. Grade distributions exist, but they don't measure cognitive demand, weekly time commitment, or the kind of sustained focus a class requires. I built Emerald Echo because I made poor scheduling decisions in my sophomore year — combining high-load courses without understanding their cumulative weekly impact — and wanted to build the tool that would have helped me plan better.",
+        body: "EHS students have no real way to know how a class is going to feel before they take it. Grade distributions are out there, but they don't tell you how mentally demanding a class is, how many hours a week it takes, or how much constant focus it needs. I built Emerald Echo because I messed up my own schedule sophomore year. I stacked a bunch of heavy classes together without realizing how much they would add up week to week, and I wanted to build the thing that would have warned me.",
       },
       {
         heading: "Approach",
-        body: "I defined three dimensions based on student workload research: Cognitive Load (raw intellectual demand per session), Time Pressure (weekly hours plus deadline density), and Executive Function (task switching, long-horizon planning, and self-monitoring required). I surveyed 85 students to calibrate the rubric — ensuring two different raters would score the same course consistently. After calibration, I scored all 144 EHS courses and built the app in React Native and Expo, with Supabase as the backend and Claude powering the Semester Simulator.",
+        body: "I set up three things to measure, based on research on student workload: Cognitive Load (how mentally hard each session is), Time Pressure (weekly hours plus how tightly the deadlines stack), and Executive Function (how much task-switching, long-term planning, and keeping track of yourself a class needs). I surveyed 85 students to calibrate the rubric so two different people would score the same class about the same. Once that was set, I scored all 144 EHS courses and built the app in React Native and Expo, with Supabase as the backend and Claude running the Semester Simulator.",
       },
       {
         heading: "What Shipped",
-        body: "The 144-course scored database is complete. The React Native app has the core browse, filter, and course-compare features running. The Claude API Semester Simulator is integrated — students select a set of courses and see a projected weekly load profile with conflict zones flagged. The app is in internal testing with CS Club members at EHS. Public launch is planned for the next EHS course registration cycle.",
+        body: "The 144-course database is done. The app can browse, filter, and compare courses. The Claude Semester Simulator is connected, so students pick a set of classes and get a projected weekly load with the rough weeks flagged. Right now it's in testing with CS Club members at EHS, and I'm planning to launch it for the whole school at the next registration cycle.",
       },
     ],
   },
@@ -169,9 +169,9 @@ export const projects: Project[] = [
     slug: "drift",
     title: "Drift",
     subtitle:
-      "A Bay Area teen event layer — surfacing what's actually worth going to, delivered weekly.",
+      "A weekly digest that finds the Bay Area teen events that are actually worth going to.",
     description:
-      "Events that matter to teens don't surface on Eventbrite or Instagram. A scraper pulls local events across the Bay Area, the Claude API classifies and deduplicates, and a weekly email digest goes out to subscribers via Resend. GitHub Actions runs the cron. Built because the gap was obvious.",
+      "The events teens actually care about don't show up on Eventbrite or Instagram. A scraper pulls local Bay Area events, the Claude API sorts them and removes the duplicates, and a weekly email digest goes out to subscribers through Resend. GitHub Actions runs the whole thing on a schedule. I built it because the gap was pretty obvious once I noticed it.",
     stack: ["Next.js", "Supabase", "Claude API", "Resend", "GitHub Actions"],
     role: "Builder",
     status: "building",
@@ -183,33 +183,33 @@ export const projects: Project[] = [
     course: "Independent Project",
     image: "/project-drift.svg",
     objective:
-      "Build an automated event-discovery layer for Bay Area teens that surfaces the local events actually worth attending — the ones that never appear on Eventbrite or Instagram — and deliver them to subscribers through a curated weekly digest.",
+      "Build something that automatically finds the local Bay Area events worth going to, the ones that never make it onto Eventbrite or Instagram, and send them to subscribers in a weekly digest.",
     responsibilities: [
-      "Identified the core gap: events relevant to teens — workshops, meetups, pop-ups, volunteer days — are scattered across dozens of sources and never aggregate anywhere usable",
-      "Built a scraper that pulls events from across Bay Area sources into a single Supabase database",
-      "Integrated the Claude API to classify each event by relevance and deduplicate overlapping listings pulled from different sources",
-      "Designed and built the weekly email digest, delivered to subscribers via Resend",
-      "Configured GitHub Actions cron jobs to run the full scrape → classify → deduplicate → send pipeline automatically every week with no manual intervention",
-      "Built the subscriber-facing landing and signup site in Next.js",
+      "Figured out the main problem: the events teens want (workshops, meetups, pop-ups, volunteer days) are spread across dozens of places and never collect anywhere useful",
+      "Built a scraper that pulls events from a bunch of Bay Area sources into one Supabase database",
+      "Connected the Claude API to sort each event by how relevant it is and to catch the same event when it shows up from different sources",
+      "Designed and built the weekly email digest that goes out to subscribers through Resend",
+      "Set up GitHub Actions cron jobs so the whole scrape, sort, dedupe, and send pipeline runs every week on its own",
+      "Built the landing and signup site in Next.js",
     ],
     whatILearned: [
-      "How to design an unattended content pipeline that runs on a schedule — the hard part is not any single step but making the whole chain reliable enough to run without me watching it",
-      "Using an LLM as a structured classification and deduplication engine rather than a chat interface — designing prompts that return consistent, parseable output every run",
-      "Email deliverability fundamentals: why dedicated transactional email services exist and how sender reputation affects whether a digest lands in the inbox or spam",
-      "The value of scoping a product to a specific, real audience — Bay Area teens — instead of trying to build a general-purpose event platform for everyone",
+      "How to build a pipeline that runs on a schedule without me. The hard part isn't any one step, it's making the whole chain reliable enough that I don't have to babysit it",
+      "How to use an LLM as a sorting and dedupe engine instead of a chatbot, which means writing prompts that give back the same clean, parseable format every single run",
+      "How email deliverability actually works: why services like Resend exist, and how your sender reputation decides whether the digest lands in the inbox or in spam",
+      "Why it's better to build for one specific group of people, Bay Area teens, than to try to make a general event app for everyone",
     ],
     sections: [
       {
         heading: "Context",
-        body: "The events that matter most to teens — free workshops, hackathons, library programs, volunteer days, local pop-ups — are exactly the ones that never surface on the big platforms. They live in scattered Instagram posts, city calendars, and word of mouth. I kept missing things I would have wanted to attend simply because there was no single place that collected them. Drift exists to close that gap.",
+        body: "The events that matter most to teens, like free workshops, hackathons, library programs, volunteer days, and local pop-ups, are exactly the ones that never show up on the big platforms. They're buried in random Instagram posts, city calendars, and word of mouth. I kept finding out about stuff I would have gone to only after it already happened, just because there was no single place that pulled it all together. Drift is my fix for that.",
       },
       {
         heading: "Approach",
-        body: "A scraper pulls events from across Bay Area sources into a Supabase database. The Claude API then does the work that makes the product usable: it classifies each event for teen relevance and deduplicates the same event pulled from multiple sources. A weekly digest of the best results goes out to subscribers through Resend, and the entire pipeline runs on a GitHub Actions cron schedule so it operates without manual effort.",
+        body: "A scraper pulls events from a bunch of Bay Area sources into a Supabase database. Then the Claude API does the part that makes it actually usable: it rates each event for how relevant it is to teens and merges the same event when it came in from different places. A weekly digest of the best ones goes out through Resend, and the whole pipeline runs on a GitHub Actions schedule so I don't have to touch it.",
       },
       {
         heading: "Status",
-        body: "The scrape, classify, and digest pipeline is built and running on its weekly schedule. Current work is on expanding source coverage and tuning the relevance classifier so the digest stays tight and high-signal as the event pool grows.",
+        body: "The scrape, sort, and digest pipeline is built and running every week. Right now I'm adding more sources and tuning the classifier so the digest stays short and worth reading as the number of events grows.",
       },
     ],
   },
@@ -217,9 +217,9 @@ export const projects: Project[] = [
     slug: "deadlineos",
     title: "DeadlineOS",
     subtitle:
-      "An AI-powered deadline scheduler that tracks procrastination delta and surfaces what actually needs to move.",
+      "An AI deadline scheduler that tracks how long you put things off and shows you what actually needs to move.",
     description:
-      "Students don't need another calendar — they need a system that knows the difference between a task they're avoiding and one they've already solved in their head. DeadlineOS logs the gap between when a task was set and when it was touched, surfaces procrastination patterns, and prioritizes accordingly.",
+      "Students don't need another calendar. They need something that can tell the difference between a task they're avoiding and one they've basically already figured out in their head. DeadlineOS tracks the gap between when a task gets assigned and when you actually touch it, finds your procrastination patterns, and reorders your priorities based on that.",
     stack: ["JavaScript", "Node.js", "AI"],
     role: "Builder",
     status: "shipped",
@@ -234,9 +234,9 @@ export const projects: Project[] = [
     slug: "ehs-portal",
     title: "EHS Portal",
     subtitle:
-      "A student companion app for Emerald High — built for the school, by a student who attends it.",
+      "A student app for Emerald High, built by a student who actually goes there.",
     description:
-      "A TypeScript/Next.js student portal for Emerald High School, Dublin CA. Centralizes the information students actually need in a format that doesn't require navigating three district sub-portals.",
+      "A student portal for Emerald High School in Dublin, CA, built with TypeScript and Next.js. It puts the information students actually need in one place, instead of making them dig through three different district sub-portals.",
     stack: ["TypeScript", "Next.js", "Tailwind"],
     role: "Builder",
     status: "building",
@@ -251,9 +251,9 @@ export const projects: Project[] = [
     slug: "triValley-prep",
     title: "Tri-Valley Prep",
     subtitle:
-      "A student-run SAT tutoring service targeting 1500+, serving Dublin, Pleasanton, San Ramon, and Danville.",
+      "A student-run SAT tutoring service aiming for 1500+, serving Dublin, Pleasanton, San Ramon, and Danville.",
     description:
-      "Co-founded from scratch: website, pricing, branding, client acquisition. 1-on-1 Google Meet sessions. Tutors scored 1540–1570, with a perfect 800 on Math. The pitch is simple: get help from someone who just did this.",
+      "I co-founded it from scratch: the website, the pricing, the branding, and finding clients. Sessions are 1-on-1 over Google Meet. The tutors scored between 1540 and 1570, including a perfect 800 on Math. The pitch is simple: get help from someone who just did this.",
     stack: ["Next.js", "Tailwind"],
     role: "Co-Founder",
     status: "shipped",
@@ -265,32 +265,32 @@ export const projects: Project[] = [
     course: "Independent Venture",
     image: "/project-tri-valley-prep.svg",
     objective:
-      "Co-found a student-run SAT tutoring service that connects Tri-Valley students with tutors who recently scored 1500+, making high-quality, relatable test prep accessible across Dublin, Pleasanton, San Ramon, and Danville.",
+      "Co-found a student-run SAT tutoring service that connects Tri-Valley students with tutors who recently scored 1500+, so good, relatable test prep is actually available across Dublin, Pleasanton, San Ramon, and Danville.",
     responsibilities: [
-      "Co-founded the venture from scratch — defined the service model, set pricing, and built the positioning around tutors who had just taken the test themselves",
-      "Built the website and visual branding in Next.js and Tailwind",
-      "Ran client acquisition and onboarding across four Tri-Valley cities",
-      "Delivered 1-on-1 SAT tutoring sessions over Google Meet, working with students on both Math and Reading/Writing",
-      "Coordinated scheduling and progress tracking for recurring students alongside a full school schedule",
+      "Co-founded the whole thing from scratch: figured out how it would work, set the pricing, and built it around tutors who had just taken the test themselves",
+      "Built the website and the branding in Next.js and Tailwind",
+      "Found and onboarded clients across four Tri-Valley cities",
+      "Ran 1-on-1 SAT sessions over Google Meet, working with students on both Math and Reading/Writing",
+      "Kept track of scheduling and progress for repeat students while carrying a full school schedule myself",
     ],
     whatILearned: [
-      "How to launch a service business end to end: branding, pricing, a website, and — hardest of all — finding and keeping the first real clients",
-      "Translating my own recent SAT experience into a teaching method that works for students a year or two behind me, rather than just explaining how I personally did it",
-      "Client communication and reliability — families are trusting you with something that matters to them, and consistency is the whole product",
-      "Why a credible, specific pitch ('learn from someone who just scored 1540+') converts far better than a generic one",
+      "How to start a service business from end to end: the branding, the pricing, the website, and the hardest part by far, finding and keeping the first real clients",
+      "How to turn my own recent SAT experience into a way of teaching that actually works for students a year or two behind me, instead of just explaining how I did it",
+      "How much client communication and just being reliable matters. Families are trusting you with something they care about, and showing up consistently is basically the whole product",
+      "Why a specific, believable pitch like 'learn from someone who just scored 1540+' works way better than a generic one",
     ],
     sections: [
       {
         heading: "Context",
-        body: "SAT prep in the Tri-Valley is dominated by expensive corporate test-prep centers taught by adults who took the test decades ago. My co-founder and I had just scored in the 1540–1570 range — including a perfect 800 on Math — and realized the most relatable, current help could come from students who had just done it. Tri-Valley Prep turned that insight into a service.",
+        body: "SAT prep in the Tri-Valley is mostly expensive corporate test-prep centers taught by adults who took the test decades ago. My co-founder and I had just scored between 1540 and 1570, including a perfect 800 on Math, and we realized the most relatable and up-to-date help could come from students who had just done it themselves. Tri-Valley Prep is that idea turned into a real service.",
       },
       {
         heading: "Approach",
-        body: "We built the brand, pricing, and website ourselves, then ran client acquisition across Dublin, Pleasanton, San Ramon, and Danville. Tutoring happens 1-on-1 over Google Meet so we can serve all four cities without a physical location. The pitch is deliberately simple and specific: get help from someone who just sat in your seat and scored 1500+.",
+        body: "We built the brand, the pricing, and the website ourselves, then went out and found clients across Dublin, Pleasanton, San Ramon, and Danville. Tutoring happens 1-on-1 over Google Meet so we can cover all four cities without renting a space. The pitch is simple and specific on purpose: get help from someone who just sat in your seat and scored 1500+.",
       },
       {
         heading: "Outcome",
-        body: "Tri-Valley Prep is live and serving students across the four Tri-Valley cities. Beyond the tutoring itself, it has been my most complete lesson in running something real — every part of it, from the landing page to the recurring client relationships, is something we built and maintain ourselves.",
+        body: "Tri-Valley Prep is live and working with students across all four cities. Past the tutoring itself, it's been the most complete lesson I've had in running something real. Every part of it, from the landing page to the relationships with repeat clients, is something we built and keep running ourselves.",
       },
     ],
   },
@@ -298,9 +298,9 @@ export const projects: Project[] = [
     slug: "cnn-alzheimers",
     title: "CNN × Alzheimer's",
     subtitle:
-      "Exploring how convolutional neural networks can support early detection of Alzheimer's disease using MRI imaging data.",
+      "Looking at how convolutional neural networks could help catch Alzheimer's disease earlier using MRI scans.",
     description:
-      "An ongoing research project examining how CNNs — a class of deep learning models — can analyze MRI scans to support earlier diagnosis of Alzheimer's. The work covers existing model architectures, performance metrics used in clinical AI contexts, and the ethical implications of deploying AI in medical diagnosis. Associated with Emerald High School.",
+      "An ongoing research project on how CNNs, a type of deep learning model, can read MRI scans to help diagnose Alzheimer's earlier. I'm working through the existing model designs, the performance metrics people use for clinical AI, and the ethical questions that come with using AI in medical diagnosis. Done through Emerald High School.",
     stack: ["Python", "TensorFlow", "CNN", "Medical Imaging"],
     role: "Researcher",
     status: "building",
@@ -314,9 +314,9 @@ export const projects: Project[] = [
     slug: "lifeLens",
     title: "LifeLens",
     subtitle:
-      "An AI career counselor that gives teens a judgment-free space to explore who they might become.",
+      "An AI career counselor that gives teens a no-pressure space to think about who they might become.",
     description:
-      "Built for CogniHacks 2025. A FastAPI backend integrates GPT to power a conversational career exploration chatbot. HTML/CSS/JS frontend, browser-side chat history persistence.",
+      "I built this for CogniHacks 2025. A FastAPI backend uses GPT to run a chatbot that helps you talk through career ideas. The frontend is HTML, CSS, and JS, and it saves your chat history right in the browser.",
     stack: ["FastAPI", "Python", "OpenAI GPT", "HTML", "CSS", "JavaScript"],
     role: "Builder",
     status: "shipped",

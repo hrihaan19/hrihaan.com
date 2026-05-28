@@ -195,7 +195,7 @@ export default function CaseStudy({ project }: { project: Project }) {
           >
             <Image
               src={project.image}
-              alt={`${project.title} — project visualization`}
+              alt={`${project.title} project visualization`}
               width={1200}
               height={560}
               style={{ width: "100%", height: "auto", display: "block" }}
@@ -431,8 +431,8 @@ export default function CaseStudy({ project }: { project: Project }) {
             >
               <SectionLabel num={nextLabel()} heading="Status" />
               <BodyText muted>
-                Detailed case study documentation is in progress. Check back soon, or view the
-                project on GitHub if available.
+                I&apos;m still writing up the full case study for this one. Check back soon, or
+                take a look at the project on GitHub if there&apos;s a link.
               </BodyText>
             </motion.section>
           )}

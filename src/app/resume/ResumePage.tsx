@@ -27,15 +27,15 @@ const education = {
 
 const projects = [
   {
-    title: "Hidden Currents — Peak-Stress Water Index",
+    title: "Hidden Currents: Peak-Stress Water Index",
     role: "Sole Author",
     year: "2026",
     status: "Working Paper",
     points: [
-      "Introduced PSWI, a new metric multiplying peak water use by location water stress (WRI Aqueduct 4.0) to expose true data center water impact",
-      "Audited 53 hyperscale and colo facilities across 8 companies; found 4,100× disparity between best (Hamina, Finland) and worst (Phoenix, AZ) operators",
-      "Monte Carlo sensitivity analysis (1,000 runs) confirms ranking stability at ρ = 0.982 under ±50% coefficient perturbation",
-      "Policy proposal for SEC-style mandatory quarterly PSWI disclosure; open dataset and code at github.com/hrihaan19/pswi-data-center-audit",
+      "Built PSWI, a new metric that multiplies peak water use by local water stress (WRI Aqueduct 4.0) to show the real water impact of a data center",
+      "Audited 53 hyperscale and colocation facilities across 8 companies; found a 4,100× gap between the best (Hamina, Finland) and worst (Phoenix, AZ) operators",
+      "Ran a 1,000-run Monte Carlo sensitivity analysis; the ranking held at ρ = 0.982 even with coefficients shifted ±50%",
+      "Wrote a policy proposal for SEC-style quarterly PSWI disclosure; open dataset and code at github.com/hrihaan19/pswi-data-center-audit",
     ],
   },
   {
@@ -44,8 +44,8 @@ const projects = [
     year: "2026",
     status: "Open Dataset",
     points: [
-      "Reproducible Python pipeline estimating scope-1 and scope-2 water consumption for 1,474 US data centers by state using IM3 Atlas facility data",
-      "Full sensitivity analysis across power density, WUE, and EWIF coefficients; any updated coefficients can be re-run in minutes",
+      "Reproducible Python pipeline that estimates scope-1 and scope-2 water use for 1,474 US data centers by state, using IM3 Atlas facility data",
+      "Full sensitivity analysis across power density, WUE, and EWIF coefficients; swap in new coefficients and re-run in minutes",
     ],
   },
   {
@@ -54,8 +54,8 @@ const projects = [
     year: "2025–26",
     status: "In Development",
     points: [
-      "Course intelligence platform for Emerald High School: 144 courses scored across Cognitive Load, Time Pressure, and Executive Function dimensions",
-      "AI Semester Simulator powered by Claude API lets students model full schedules before selecting classes",
+      "Course tool for Emerald High School: scored all 144 courses on Cognitive Load, Time Pressure, and Executive Function",
+      "AI Semester Simulator built on the Claude API lets students test full schedules before they pick classes",
       "Stack: React Native, Expo, Supabase, Claude API",
     ],
   },
@@ -65,8 +65,8 @@ const projects = [
     year: "2026",
     status: "In Development",
     points: [
-      "Bay Area teen event aggregation platform — scraper surfaces events that don't appear on Eventbrite or Instagram",
-      "Claude API classifies and deduplicates; weekly digest via Resend; scraper runs on GitHub Actions cron",
+      "Platform that pulls together Bay Area teen events; the scraper finds ones that don't show up on Eventbrite or Instagram",
+      "Claude API sorts and dedupes them; weekly digest goes out via Resend; scraper runs on a GitHub Actions cron",
       "Stack: Next.js, Supabase, Claude API, Resend",
     ],
   },
@@ -76,7 +76,7 @@ const projects = [
     year: "2026",
     status: "Shipped",
     points: [
-      "AI-powered student deadline scheduler with procrastination delta logging — surfaces tasks being avoided, not just tasks that are due",
+      "AI student deadline scheduler that logs how long you put tasks off, so it surfaces the ones you're avoiding instead of just the ones that are due",
     ],
   },
   {
@@ -85,7 +85,7 @@ const projects = [
     year: "2026",
     status: "In Development",
     points: [
-      "Next.js / TypeScript companion app for Emerald High School students; centralises information scattered across district sub-portals",
+      "Next.js and TypeScript app for Emerald High School students that pulls together info scattered across district sub-portals",
     ],
   },
   {
@@ -94,8 +94,8 @@ const projects = [
     year: "2025–26",
     status: "Ongoing",
     points: [
-      "Research project examining how CNNs can support early Alzheimer's diagnosis via MRI analysis; reviewing model architectures, clinical performance metrics, and ethical implications",
-      "Associated with Emerald High School",
+      "Research project on how CNNs can help diagnose Alzheimer's earlier from MRI scans; working through model designs, clinical performance metrics, and ethical questions",
+      "Done through Emerald High School",
     ],
   },
   {
@@ -104,8 +104,8 @@ const projects = [
     year: "2025",
     status: "Live",
     points: [
-      "Student-run SAT tutoring service serving Dublin, Pleasanton, San Ramon, and Danville; built website, pricing, branding, and client acquisition from scratch",
-      "Tutors scored 1540–1570; perfect 800 on Math section",
+      "Student-run SAT tutoring service for Dublin, Pleasanton, San Ramon, and Danville; built the website, pricing, branding, and client base from scratch",
+      "Tutors scored 1540 to 1570, including a perfect 800 on Math",
     ],
   },
 ];
@@ -167,7 +167,7 @@ const skills = {
   "Other": ["LaTeX", "Monte Carlo simulation", "Sensitivity analysis", "Technical writing"],
 };
 
-const athletics = "Varsity Tennis — Emerald High School · 4th Place, BVAL Men's Doubles (Spring 2025)";
+const athletics = "Varsity Tennis, Emerald High School · 4th Place, BVAL Men's Doubles (Spring 2025)";
 
 /* ─── Sub-components ─────────────────────────────────────── */
 

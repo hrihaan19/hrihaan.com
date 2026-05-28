@@ -44,9 +44,9 @@ export default function Contact() {
                 marginTop: "clamp(1.5rem, 3vw, 2rem)",
               }}
             >
-              Open to research collaborations, policy conversations, and
-              projects at the intersection of technology and public life.
-              If something here is interesting to you, reach out directly.
+              I&apos;m open to research collaborations, policy conversations,
+              and projects that bring tech and public policy together.
+              If anything here caught your attention, just reach out.
             </p>
           </motion.div>
 

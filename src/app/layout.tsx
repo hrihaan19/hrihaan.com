@@ -32,10 +32,10 @@ export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: {
     default: "Hrihaan Bhutani",
-    template: "%s — Hrihaan Bhutani",
+    template: "%s · Hrihaan Bhutani",
   },
   description:
-    "Builder, researcher, student board trustee. Building AI systems and policy at the intersection of technology and public life. Dublin, CA · Class of 2027.",
+    "Builder, researcher, and student board trustee building AI tools and working on tech policy. Dublin, CA · Class of 2027.",
   openGraph: {
     type: "website",
     locale: "en_US",

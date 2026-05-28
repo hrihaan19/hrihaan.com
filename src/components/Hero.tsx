@@ -165,7 +165,7 @@ export default function Hero() {
                   <span className="relative inline-flex rounded-full h-1.5 w-1.5" style={{ background: "var(--accent)" }} />
                 </span>
                 <span className="text-label" style={{ color: "var(--fg-muted)" }}>
-                  Building Emerald Echo — EHS course intelligence
+                  Building Emerald Echo, a course tool for EHS
                 </span>
               </div>
             </FadeUp>

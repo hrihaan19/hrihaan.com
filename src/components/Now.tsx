@@ -5,23 +5,23 @@ import { motion } from "framer-motion";
 const entries = [
   {
     date: "May 2026",
-    text: "Finishing the Emerald Echo semester simulator — got the Claude API integration working, debugging load calculation edge cases in the schedule modeler.",
+    text: "Finishing the Emerald Echo semester simulator. Got the Claude API working, now I'm debugging some edge cases in how it calculates load in the schedule modeler.",
   },
   {
     date: "May 2026",
-    text: "PSWI paper submitted for conference consideration. Writing up the policy proposal as a standalone brief for DUSD board context.",
+    text: "Submitted the PSWI paper for conference consideration. Now I'm writing up the policy proposal as its own short brief so it makes sense in a DUSD board context.",
   },
   {
     date: "Apr 2026",
-    text: "Drift: scraper is running on GitHub Actions cron, Resend integration live. First digest went out.",
+    text: "Drift: the scraper is running on a GitHub Actions cron and Resend is hooked up. First digest actually went out.",
   },
   {
     date: "Mar 2026",
-    text: "Published Thirsty Compute Atlas to GitHub — open pipeline, reproducible numbers, full sensitivity analysis. Anyone can re-run it.",
+    text: "Published Thirsty Compute Atlas to GitHub. Open pipeline, numbers you can reproduce, full sensitivity analysis. Anyone can re-run the whole thing.",
   },
   {
     date: "Jan 2026",
-    text: "Started CNN/Alzheimer's research — reading through existing models, working through the imaging datasets. Early stages.",
+    text: "Started the CNN/Alzheimer's research. Reading through the existing models and working through the imaging datasets. Still early.",
   },
 ];
 
